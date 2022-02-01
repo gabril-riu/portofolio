@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background: #7f7fd5; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #91eae4,
+    #86a8e7,
+    #7f7fd5
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #91eae4,
+    #86a8e7,
+    #7f7fd5
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  min-height: 100vh;
+  border-radius: 10px;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.title-body {
+  display: flex;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 800;
+  font-family: "Abril Fatface", cursive;
+  letter-spacing: 0.5rem;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 20px 0 20px 25px;
+  border-color: transparent transparent transparent #7f00ff;
+  transform: translateY(0);
+  margin-right: 10px;
+}
+
+.line {
+  border: 5px solid black;
+  border-radius: 50rem;
+  background-color: black;
+}
+
+/* --- Background --- */
+.background-intro {
+  background-image: url("/public/image/landing-4.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  width: 100%;
+  text-align: center;
+  height: 100vh;
+  font-family: "Staatliches", cursive;
+}
+
+.text-intro {
+  font-weight: 800;
+  padding: 15% 0;
+  letter-spacing: 0.2rem;
+  background: linear-gradient(90deg, grey, white, black);
+  letter-spacing: 5px;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: shine 7.5s linear infinite;
+  position: relative;
+}
+/* --- /end Background --- */
+
+/*---- Biography ----*/
+#biography {
+  margin: 50px 0;
+}
+
+.info-user {
+  font-weight: 600;
+  text-align: center;
+}
+
+.img-biography {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+}
+
+.deskription-user {
+  font-family: "Noto Serif", serif;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  font-size: larger;
+}
+
+/* Timeline holder */
+ul.timeline {
+  list-style-type: none;
+  position: relative;
+  padding-left: 1rem;
+  border-radius: 50% 0;
+}
+
+/* Timeline vertical line */
+ul.timeline:before {
+  content: " ";
+  background: #fff;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  z-index: 400;
+  border-radius: 1rem;
+}
+
+li.timeline-item {
+  margin: 20px 0;
+}
+
+/* Timeline item arrow */
+.timeline-arrow {
+  border-top: 0.5rem solid transparent;
+  border-right: 0.5rem solid white;
+  border-bottom: 0.5rem solid transparent;
+  display: block;
+  position: absolute;
+  left: 1.5rem;
+}
+
+/* Timeline item circle marker */
+li.timeline-item::before {
+  content: " ";
+  background: #ddd;
+  display: inline-block;
+  position: absolute;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  left: 0.2rem;
+  width: 14px;
+  height: 14px;
+  z-index: 400;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* -- Footer -- */
+footer {
+  background-color: black;
+}
+
+.cpy {
+  font-size: 15px;
+  text-align: center;
+  transform: translateY(15em);
+}
+
+/*--- Skill ---*/
+#skill {
+  margin: 100px 0;
+}
+
+/* ------------------ Animation ------------------ */
+@keyframes shine {
+  0% {
+    background-position-x: -500%;
+  }
+  100% {
+    background-position-x: 500%;
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  .text-intro {
+    font-size: 72px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .text-intro {
+    padding-top: 30%;
+    font-size: 64px;
+  }
+  .img-biography {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+  }
+  .info-user h3 {
+    font-size: 20px;
+    font-weight: 800;
+  }
+}
