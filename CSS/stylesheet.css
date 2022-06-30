@@ -25,38 +25,51 @@ body {
   border-radius: 10px;
 }
 
-.sidenav {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
+#offcanvasNavbar {
+  background-color: rgb(189, 182, 182);
 }
 
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
+.navbar-toggler {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: "Montserrat";
+  font-size: 2.5rem;
+  text-align: center;
+  --borderWidth: 3px;
+  background-color: black;
+  position: relative;
+  border-radius: var(--borderWidth);
 }
 
-.sidenav a:hover {
-  color: #f1f1f1;
-}
-
-.sidenav .closebtn {
+.navbar-toggler:after {
+  content: "";
   position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
+  top: calc(-1 * var(--borderWidth));
+  left: calc(-1 * var(--borderWidth));
+  height: calc(100% + var(--borderWidth) * 2);
+  width: calc(100% + var(--borderWidth) * 2);
+  background: linear-gradient(
+    90deg,
+    rgba(97, 97, 97, 1) 0%,
+    rgba(8, 8, 224, 1) 44%,
+    rgba(102, 102, 102, 1) 100%
+  );
+  border-radius: calc(2 * var(--borderWidth));
+  z-index: -1;
+  background-size: 400% 400%;
+}
+
+.nav-item {
+  padding: 1px 15px;
+  font-size: 24px;
+  font-weight: 800;
+  color: white;
+}
+
+.nav-item:hover {
+  border-bottom: 5px solid white;
 }
 
 .title-body {
@@ -86,14 +99,17 @@ body {
   background-color: black;
 }
 
+.icon-nav {
+  color: #7f00ff;
+}
+
 /* --- Background --- */
 .background-intro {
-  background-image: url("public/image/landing-4.jpg");
+  background: url("/public/image/landing-4.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   width: 100%;
-  text-align: center;
   height: 100vh;
   font-family: "Staatliches", cursive;
 }
@@ -190,12 +206,8 @@ li.timeline-item::before {
 /* -- Footer -- */
 footer {
   background-color: black;
-}
-
-.cpy {
-  font-size: 15px;
-  text-align: center;
-  transform: translateY(15em);
+  padding: 5%;
+  font-size: 200px;
 }
 
 /*--- Skill ---*/
@@ -232,5 +244,9 @@ footer {
   .info-user h3 {
     font-size: 20px;
     font-weight: 800;
+  }
+
+  .nav-item:hover {
+    border-bottom: 1px solid rgb(83, 83, 87);
   }
 }
