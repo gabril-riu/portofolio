@@ -105,7 +105,7 @@ body {
 
 /* --- Background --- */
 .background-intro {
-  background-image: url("public/image/landing-4.jpg");
+  background-image: url("../public/image/landing-4.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
